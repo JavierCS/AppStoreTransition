@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		B28FD34524928A10004CDFB2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28FD34424928A10004CDFB2 /* AppDelegate.swift */; };
 		B28FD34724928A10004CDFB2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28FD34624928A10004CDFB2 /* SceneDelegate.swift */; };
-		B28FD34924928A10004CDFB2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28FD34824928A10004CDFB2 /* ViewController.swift */; };
+		B28FD34924928A10004CDFB2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28FD34824928A10004CDFB2 /* HomeViewController.swift */; };
 		B28FD34C24928A10004CDFB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28FD34A24928A10004CDFB2 /* Main.storyboard */; };
 		B28FD34E24928A15004CDFB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B28FD34D24928A15004CDFB2 /* Assets.xcassets */; };
 		B28FD35124928A15004CDFB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B28FD34F24928A15004CDFB2 /* LaunchScreen.storyboard */; };
+		B2AE48B02493ECB200194F5E /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AE48AE2493ECB200194F5E /* CardCollectionViewCell.xib */; };
+		B2AE48B12493ECB200194F5E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AE48AF2493ECB200194F5E /* CardCollectionViewCell.swift */; };
+		B2AE48B32493ED4600194F5E /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = B2AE48B22493ED4600194F5E /* bg1.png */; };
+		B2AE48B62493F83900194F5E /* CardContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AE48B52493F83900194F5E /* CardContentView.xib */; };
+		B2AE48B82493F85D00194F5E /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AE48B72493F85D00194F5E /* CardContentView.swift */; };
+		B2AE48BA2493F88500194F5E /* Nibloadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AE48B92493F88500194F5E /* Nibloadable.swift */; };
+		B2AE48BD2493F8C300194F5E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AE48BC2493F8C300194F5E /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B28FD34124928A10004CDFB2 /* AppStoreTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28FD34424928A10004CDFB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B28FD34624928A10004CDFB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B28FD34824928A10004CDFB2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B28FD34824928A10004CDFB2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B28FD34B24928A10004CDFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B28FD34D24928A15004CDFB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B28FD35024928A15004CDFB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B28FD35224928A15004CDFB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2AE48AE2493ECB200194F5E /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		B2AE48AF2493ECB200194F5E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		B2AE48B22493ED4600194F5E /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg1.png; sourceTree = "<group>"; };
+		B2AE48B52493F83900194F5E /* CardContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardContentView.xib; sourceTree = "<group>"; };
+		B2AE48B72493F85D00194F5E /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
+		B2AE48B92493F88500194F5E /* Nibloadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibloadable.swift; sourceTree = "<group>"; };
+		B2AE48BC2493F8C300194F5E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,54 @@
 		B28FD34324928A10004CDFB2 /* AppStoreTransition */ = {
 			isa = PBXGroup;
 			children = (
+				B2AE48BB2493F8B700194F5E /* Extensions */,
+				B2AE48B42493ED4E00194F5E /* Images */,
+				B2AE48AD2493ECB200194F5E /* Views */,
+				B2AE48A72493EAD900194F5E /* ViewControllers */,
+				B2AE48B92493F88500194F5E /* Nibloadable.swift */,
 				B28FD34424928A10004CDFB2 /* AppDelegate.swift */,
 				B28FD34624928A10004CDFB2 /* SceneDelegate.swift */,
-				B28FD34824928A10004CDFB2 /* ViewController.swift */,
 				B28FD34A24928A10004CDFB2 /* Main.storyboard */,
 				B28FD34D24928A15004CDFB2 /* Assets.xcassets */,
 				B28FD34F24928A15004CDFB2 /* LaunchScreen.storyboard */,
 				B28FD35224928A15004CDFB2 /* Info.plist */,
 			);
 			path = AppStoreTransition;
+			sourceTree = "<group>";
+		};
+		B2AE48A72493EAD900194F5E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B28FD34824928A10004CDFB2 /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B2AE48AD2493ECB200194F5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B2AE48AE2493ECB200194F5E /* CardCollectionViewCell.xib */,
+				B2AE48AF2493ECB200194F5E /* CardCollectionViewCell.swift */,
+				B2AE48B52493F83900194F5E /* CardContentView.xib */,
+				B2AE48B72493F85D00194F5E /* CardContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B2AE48B42493ED4E00194F5E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B2AE48B22493ED4600194F5E /* bg1.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		B2AE48BB2493F8B700194F5E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B2AE48BC2493F8C300194F5E /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +178,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2AE48B62493F83900194F5E /* CardContentView.xib in Resources */,
+				B2AE48B02493ECB200194F5E /* CardCollectionViewCell.xib in Resources */,
 				B28FD35124928A15004CDFB2 /* LaunchScreen.storyboard in Resources */,
 				B28FD34E24928A15004CDFB2 /* Assets.xcassets in Resources */,
 				B28FD34C24928A10004CDFB2 /* Main.storyboard in Resources */,
+				B2AE48B32493ED4600194F5E /* bg1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +194,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B28FD34924928A10004CDFB2 /* ViewController.swift in Sources */,
+				B2AE48B12493ECB200194F5E /* CardCollectionViewCell.swift in Sources */,
+				B2AE48BD2493F8C300194F5E /* UIViewExtensions.swift in Sources */,
+				B2AE48BA2493F88500194F5E /* Nibloadable.swift in Sources */,
+				B28FD34924928A10004CDFB2 /* HomeViewController.swift in Sources */,
+				B2AE48B82493F85D00194F5E /* CardContentView.swift in Sources */,
 				B28FD34524928A10004CDFB2 /* AppDelegate.swift in Sources */,
 				B28FD34724928A10004CDFB2 /* SceneDelegate.swift in Sources */,
 			);
