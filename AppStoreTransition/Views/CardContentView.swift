@@ -15,6 +15,15 @@ import UIKit
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     
+    var cardViewModel: CardContentViewModel! {
+        didSet {
+            self.imvImage.image = self.cardViewModel.image
+            self.lblTitle.text = self.cardViewModel.title
+            self.lblDescription.text = self.cardViewModel.description
+            self.lblDate.text = self.cardViewModel.date
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.fromNib()
