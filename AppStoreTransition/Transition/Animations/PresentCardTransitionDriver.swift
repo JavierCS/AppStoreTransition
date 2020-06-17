@@ -26,11 +26,12 @@ class PresentCardTransitionDriver {
         let animatedContainerView = UIView()
         animatedContainerView.translatesAutoresizingMaskIntoConstraints = false
         
-        //DEBUG
-        animatedContainerView.layer.borderColor = UIColor.cyan.cgColor
-        animatedContainerView.layer.borderWidth = 5
-        cardDetailView.layer.borderColor = UIColor.yellow.cgColor
-        cardDetailView.layer.borderWidth = 5
+        if GlobalConstants.isEnabledDebugAnimatingViews {
+            animatedContainerView.layer.borderColor = UIColor.cyan.cgColor
+            animatedContainerView.layer.borderWidth = 5
+            cardDetailView.layer.borderColor = UIColor.yellow.cgColor
+            cardDetailView.layer.borderWidth = 5
+        }
         
         container.addSubview(animatedContainerView)
         
@@ -42,23 +43,38 @@ class PresentCardTransitionDriver {
         
         NSLayoutConstraint.activate(animatedContainerConstraints)
         
-        let animatedContainerVerticalConstraint = animatedContainerView.centerYAnchor.constraint(
-            equalTo: container.centerYAnchor,
-            constant: (fromCardFrame.height/2 + fromCardFrame.minY) - container.bounds.height/2
-        )
+        let animatedContainerVerticalConstraint: NSLayoutConstraint = {
+            switch GlobalConstants.cardVerticalExpandingStyle {
+            case .fromCenter: return animatedContainerView.centerYAnchor.constraint(
+                equalTo: container.centerYAnchor,
+                constant: (fromCardFrame.height/2 + fromCardFrame.minY) - container.bounds.height/2
+            )
+            case .fromTop: return animatedContainerView.topAnchor.constraint(equalTo: container.topAnchor, constant: fromCardFrame.minY)
+            }
+        }()
         
         animatedContainerVerticalConstraint.isActive = true
         
         animatedContainerView.addSubview(cardDetailView)
         
-        cardDetailView.centerYAnchor.constraint(equalTo: animatedContainerView.centerYAnchor).isActive = true
-        cardDetailView.centerXAnchor.constraint(equalTo: animatedContainerView.centerXAnchor).isActive = true
+        let verticalAnchor: NSLayoutConstraint = {
+            switch GlobalConstants.cardVerticalExpandingStyle {
+            case .fromCenter: return cardDetailView.centerYAnchor.constraint(equalTo: animatedContainerView.centerYAnchor)
+            case .fromTop: return cardDetailView.topAnchor.constraint(equalTo: animatedContainerView.topAnchor, constant: -1)
+            }
+        }()
+        let cardConstraints = [
+            verticalAnchor,
+            cardDetailView.centerXAnchor.constraint(equalTo: animatedContainerView.centerXAnchor)
+        ]
+        
+        NSLayoutConstraint.activate(cardConstraints)
         
         let cardWidthConstraint = cardDetailView.widthAnchor.constraint(equalToConstant: fromCardFrame.width)
         let cardHeightConstraint = cardDetailView.heightAnchor.constraint(equalToConstant: fromCardFrame.height)
         NSLayoutConstraint.activate([cardWidthConstraint, cardHeightConstraint])
         
-        cardDetailView.layer.cornerRadius = 16
+        cardDetailView.layer.cornerRadius = GlobalConstants.cardCornerRadius
         
         // -------------------------------
         // Final preparation
@@ -67,7 +83,7 @@ class PresentCardTransitionDriver {
         params.fromCell.resetTransform()
         
         let topTemporaryFix = screens.cardDetail.cardContentView.topAnchor.constraint(equalTo: cardDetailView.topAnchor)
-        topTemporaryFix.isActive = true
+        topTemporaryFix.isActive = GlobalConstants.isEnabledWeirdTopInsetsFix
         
         container.layoutIfNeeded()
         

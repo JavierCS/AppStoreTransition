@@ -58,7 +58,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     func animate(isHighlighted: Bool, completion: ((Bool) -> ())? = nil) {
-        let animationOptions: AnimationOptions = [.allowUserInteraction]
+        let animationOptions: AnimationOptions = GlobalConstants.isEnabledAllowsUserInteractionWhileHighlightingCard ? [.allowUserInteraction] : []
         
         if self.disabledHighlightedAnimation { return }
         
@@ -69,8 +69,8 @@ class CardCollectionViewCell: UICollectionViewCell {
                        options: animationOptions,
                        animations: {
                         if isHighlighted {
-                            self.transform = CGAffineTransform(scaleX: 0.8,
-                            y: 0.96)
+                            self.transform = CGAffineTransform(scaleX: GlobalConstants.cardHighlightedFactor,
+                            y: GlobalConstants.cardHighlightedFactor)
                         } else {
                             self.resetTransform()
                         }

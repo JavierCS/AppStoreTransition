@@ -14,11 +14,11 @@ class HomeViewController: UIViewController {
     private var transition: CardTransition?
     
     private lazy var cardModels: [CardContentViewModel] = [
-        CardContentViewModel(title: "Título 1", description: "Descripción 1", date: "11-04-2020", image: UIImage(named: "bg1.png")!.resize(toWidth: UIScreen.main.bounds.width * ( 1 / 0.96 ))),
-        CardContentViewModel(title: "Título 2", description: "Descripción 2", date: "11-04-2020", image: UIImage(named: "bg1.png")!.resize(toWidth: UIScreen.main.bounds.width * ( 1 / 0.96 ))),
-        CardContentViewModel(title: "Título 3", description: "Descripción 3", date: "11-04-2020", image: UIImage(named: "bg1.png")!.resize(toWidth: UIScreen.main.bounds.width * ( 1 / 0.96 ))),
-        CardContentViewModel(title: "Título 4", description: "Descripción 4", date: "11-04-2020", image: UIImage(named: "bg1.png")!.resize(toWidth: UIScreen.main.bounds.width * ( 1 / 0.96 ))),
-        CardContentViewModel(title: "Título 5", description: "Descripción 5", date: "11-04-2020", image: UIImage(named: "bg1.png")!.resize(toWidth: UIScreen.main.bounds.width * ( 1 / 0.96 ))),
+        CardContentViewModel(title: "Título 1", description: "Descripción 1", date: "11-04-2020", image: UIImage(named: "bg1.png")!.resize(toWidth: UIScreen.main.bounds.width * ( 1 / GlobalConstants.cardHighlightedFactor ))),
+        CardContentViewModel(title: "Título 2", description: "Descripción 2", date: "11-04-2020", image: UIImage(named: "bg1.png")!.resize(toWidth: UIScreen.main.bounds.width * ( 1 / GlobalConstants.cardHighlightedFactor ))),
+        CardContentViewModel(title: "Título 3", description: "Descripción 3", date: "11-04-2020", image: UIImage(named: "bg1.png")!.resize(toWidth: UIScreen.main.bounds.width * ( 1 / GlobalConstants.cardHighlightedFactor ))),
+        CardContentViewModel(title: "Título 4", description: "Descripción 4", date: "11-04-2020", image: UIImage(named: "bg1.png")!.resize(toWidth: UIScreen.main.bounds.width * ( 1 / GlobalConstants.cardHighlightedFactor ))),
+        CardContentViewModel(title: "Título 5", description: "Descripción 5", date: "11-04-2020", image: UIImage(named: "bg1.png")!.resize(toWidth: UIScreen.main.bounds.width * ( 1 / GlobalConstants.cardHighlightedFactor ))),
         
     ]
     

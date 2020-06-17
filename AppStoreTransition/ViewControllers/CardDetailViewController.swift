@@ -37,11 +37,13 @@ class CardDetailViewController: StatusBarAnimatableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scrollView.layer.borderWidth = 3
-        scrollView.layer.borderColor = UIColor.green.cgColor
-        
-        scrollView.subviews.first!.layer.borderWidth = 3
-        scrollView.subviews.first!.layer.borderColor = UIColor.purple.cgColor
+        if GlobalConstants.isEnabledDebugAnimatingViews {
+            scrollView.layer.borderWidth = 3
+            scrollView.layer.borderColor = UIColor.green.cgColor
+            
+            scrollView.subviews.first!.layer.borderWidth = 3
+            scrollView.subviews.first!.layer.borderColor = UIColor.purple.cgColor
+        }
         
         scrollView.delegate = self
         scrollView.contentInsetAdjustmentBehavior = .never
@@ -102,7 +104,7 @@ class CardDetailViewController: StatusBarAnimatableViewController {
         let currentLocation = gesture.location(in: nil)
         let progress = isScreenEdgePan ? (gesture.translation(in: targetAnimatedView).x / 100) : (currentLocation.y - startingPoint.y) / 100
         let targetShrinkScale: CGFloat = 0.86
-        let targetCornerRadius: CGFloat = 16
+        let targetCornerRadius: CGFloat = GlobalConstants.cardCornerRadius
         
         func createInteractiveDismissalAnimatorIfNeeded() -> UIViewPropertyAnimator {
             if let animator = dismissalAnimator {
@@ -175,7 +177,9 @@ class CardDetailViewController: StatusBarAnimatableViewController {
         super.viewWillLayoutSubviews()
         scrollView.scrollIndicatorInsets = .init(top: cardContentView.bounds.height, left: 0, bottom: 0, right: 0)
         
-        self.additionalSafeAreaInsets = .init(top: max(-view.safeAreaInsets.top,0), left: 0, bottom: 0, right: 0)
+        if GlobalConstants.isEnabledTopSafeAreaInsetsFixOnCardDetailViewController {
+            self.additionalSafeAreaInsets = .init(top: max(-view.safeAreaInsets.top,0), left: 0, bottom: 0, right: 0)
+        }
     }
 }
 

@@ -46,4 +46,14 @@ import UIKit
         // else the image will get resized during animation.
         self.imvImage.contentMode = .center
     }
+    
+    func setFontState(isHighlighted: Bool) {
+        if isHighlighted {
+            lblTitle.font = UIFont.systemFont(ofSize: 36 * GlobalConstants.cardHighlightedFactor, weight: .bold)
+            lblDescription.font = UIFont.systemFont(ofSize: 18 * GlobalConstants.cardHighlightedFactor, weight: .semibold)
+        } else {
+            lblTitle.font = UIFont.systemFont(ofSize: 36, weight: .bold)
+            lblDescription.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        }
+    }
 }

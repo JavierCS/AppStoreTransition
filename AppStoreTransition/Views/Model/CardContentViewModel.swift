@@ -15,7 +15,7 @@ struct CardContentViewModel {
     var image: UIImage
     
     func highlightedImage() -> CardContentViewModel {
-        let scaledImage = image.resize(toWidth: image.size.width * 0.96)
+        let scaledImage = image.resize(toWidth: image.size.width * GlobalConstants.cardHighlightedFactor)
         return CardContentViewModel(title: self.title,
                                     description: self.description,
                                     date: "11-04-2020",

@@ -30,7 +30,7 @@ class DismissCardAnimator: NSObject {
 
 extension DismissCardAnimator: UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.6
+        return GlobalConstants.dismissalAnimationDuration
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -44,10 +44,12 @@ extension DismissCardAnimator: UIViewControllerAnimatedTransitioning {
         let cardDetailView = ctx.view(forKey: .from)!
         
         let animatedContainerView = UIView()
-        animatedContainerView.layer.borderColor = UIColor.yellow.cgColor
-        animatedContainerView.layer.borderWidth = 5
-        cardDetailView.layer.borderColor = UIColor.red.cgColor
-        cardDetailView.layer.borderWidth = 5
+        if GlobalConstants.isEnabledDebugAnimatingViews {
+            animatedContainerView.layer.borderColor = UIColor.yellow.cgColor
+            animatedContainerView.layer.borderWidth = 5
+            cardDetailView.layer.borderColor = UIColor.red.cgColor
+            cardDetailView.layer.borderWidth = 5
+        }
         
         animatedContainerView.translatesAutoresizingMaskIntoConstraints = false
         cardDetailView.translatesAutoresizingMaskIntoConstraints = false
@@ -67,7 +69,7 @@ extension DismissCardAnimator: UIViewControllerAnimatedTransitioning {
         NSLayoutConstraint.activate([animatedContainerTopConstraint, animatedContainerWidthConstraint, animatedContainerHeightConstraint])
         
         let topTemporaryFix = screens.cardDetail.cardContentView.topAnchor.constraint(equalTo: cardDetailView.topAnchor)
-        topTemporaryFix.isActive = true
+        topTemporaryFix.isActive = GlobalConstants.isEnabledWeirdTopInsetsFix
         
         container.layoutIfNeeded()
         
@@ -91,7 +93,7 @@ extension DismissCardAnimator: UIViewControllerAnimatedTransitioning {
                 cardDetailView.removeFromSuperview()
                 self.params.fromCell.isHidden = false
             } else {
-//                screens.cardDetail.
+                screens.cardDetail.isFontStateHighlighted = true
                 
                 topTemporaryFix.isActive = false
                 strechCardToFillBottom.isActive = false
@@ -118,7 +120,7 @@ extension DismissCardAnimator: UIViewControllerAnimatedTransitioning {
             completeEverything()
         }
         
-        UIView.animate(withDuration: transitionDuration(using: ctx)) {
+        UIView.animate(withDuration: transitionDuration(using: ctx) * 0.6) {
             screens.cardDetail.scrollView.contentOffset = .zero
         }
     }

@@ -22,6 +22,8 @@
 		B2A4BD2924993427004AD6DD /* DismissCardAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A4BD2824993427004AD6DD /* DismissCardAnimator.swift */; };
 		B2A4BD2C24995DA1004AD6DD /* CardPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A4BD2B24995DA1004AD6DD /* CardPresentationController.swift */; };
 		B2A4BD2E24996358004AD6DD /* StatusBarAnimatableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A4BD2D24996358004AD6DD /* StatusBarAnimatableViewController.swift */; };
+		B2A4BD3124996895004AD6DD /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A4BD3024996895004AD6DD /* GlobalConstants.swift */; };
+		B2A4BD3324996F0A004AD6DD /* ShowTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A4BD3224996F0A004AD6DD /* ShowTime.swift */; };
 		B2AE48B02493ECB200194F5E /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2AE48AE2493ECB200194F5E /* CardCollectionViewCell.xib */; };
 		B2AE48B12493ECB200194F5E /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AE48AF2493ECB200194F5E /* CardCollectionViewCell.swift */; };
 		B2AE48B32493ED4600194F5E /* bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = B2AE48B22493ED4600194F5E /* bg1.png */; };
@@ -49,6 +51,8 @@
 		B2A4BD2824993427004AD6DD /* DismissCardAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissCardAnimator.swift; sourceTree = "<group>"; };
 		B2A4BD2B24995DA1004AD6DD /* CardPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPresentationController.swift; sourceTree = "<group>"; };
 		B2A4BD2D24996358004AD6DD /* StatusBarAnimatableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarAnimatableViewController.swift; sourceTree = "<group>"; };
+		B2A4BD3024996895004AD6DD /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		B2A4BD3224996F0A004AD6DD /* ShowTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTime.swift; sourceTree = "<group>"; };
 		B2AE48AE2493ECB200194F5E /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		B2AE48AF2493ECB200194F5E /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		B2AE48B22493ED4600194F5E /* bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg1.png; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		B28FD34324928A10004CDFB2 /* AppStoreTransition */ = {
 			isa = PBXGroup;
 			children = (
+				B2A4BD2F24996870004AD6DD /* Others */,
 				B2A4BD20249926A9004AD6DD /* Transition */,
 				B2AE48BB2493F8B700194F5E /* Extensions */,
 				B2AE48B42493ED4E00194F5E /* Images */,
@@ -131,6 +136,15 @@
 				B2A4BD2B24995DA1004AD6DD /* CardPresentationController.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		B2A4BD2F24996870004AD6DD /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				B2A4BD3024996895004AD6DD /* GlobalConstants.swift */,
+				B2A4BD3224996F0A004AD6DD /* ShowTime.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 		B2AE48A72493EAD900194F5E /* ViewControllers */ = {
@@ -249,10 +263,12 @@
 				B2AE48B12493ECB200194F5E /* CardCollectionViewCell.swift in Sources */,
 				B2AE48BD2493F8C300194F5E /* UIViewExtensions.swift in Sources */,
 				B2AE48BA2493F88500194F5E /* Nibloadable.swift in Sources */,
+				B2A4BD3124996895004AD6DD /* GlobalConstants.swift in Sources */,
 				B28FD34924928A10004CDFB2 /* HomeViewController.swift in Sources */,
 				B2A4BD22249926B9004AD6DD /* CardTransition.swift in Sources */,
 				B2A4BD1F2499207C004AD6DD /* CardDetailViewController.swift in Sources */,
 				B2A4BD27249928B5004AD6DD /* PresentCardTransitionDriver.swift in Sources */,
+				B2A4BD3324996F0A004AD6DD /* ShowTime.swift in Sources */,
 				B2A4BD2E24996358004AD6DD /* StatusBarAnimatableViewController.swift in Sources */,
 				B2AE48B82493F85D00194F5E /* CardContentView.swift in Sources */,
 				B28FD34524928A10004CDFB2 /* AppDelegate.swift in Sources */,
